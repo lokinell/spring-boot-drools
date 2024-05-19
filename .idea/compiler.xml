@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for spring-boot-drools-decision-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/mybatis-flex/mybatis-flex-processor/1.8.9/mybatis-flex-processor-1.8.9.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/mybatis-flex/mybatis-flex-annotation/1.8.9/mybatis-flex-annotation-1.8.9.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar" />
+        </processorPath>
+        <module name="spring-boot-drools-decision-demo" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-drools-decision-demo" options="-parameters" />
+    </option>
+  </component>
+</project>

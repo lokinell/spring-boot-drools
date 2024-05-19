@@ -12,7 +12,6 @@ import com.example.drools.decision.demo.model.OrderRequest;
 import com.example.drools.decision.demo.service.OrderDiscountService;
  
 
- 
 @RestController
 public class OrderDiscountController {
  

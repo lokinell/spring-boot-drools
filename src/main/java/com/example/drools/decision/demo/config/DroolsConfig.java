@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class DroolsConfig {
  
     private static final String RULES_ORDER_DISCOUNT_XLS = "rules/customer-rules.xlsx";
-    private static final KieServices kieServices = KieServices.Factory.get();
+    private static final KieServices kieServices = KieServices.get();
  
     @Bean
     public KieContainer kieContainer() {

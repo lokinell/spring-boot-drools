@@ -7,15 +7,18 @@ import org.springframework.stereotype.Service;
 
 import com.example.drools.decision.demo.model.OrderDiscount;
 import com.example.drools.decision.demo.model.OrderRequest;
- 
 
- 
+import javax.annotation.Resource;
+
+
 @Service
 public class OrderDiscountService {
  
-    @Autowired
     private KieContainer kieContainer;
- 
+    public OrderDiscountService(KieContainer kieContainer) {
+        this.kieContainer = kieContainer;
+    }
+
     public OrderDiscount getDiscount(OrderRequest orderRequest) {
         OrderDiscount orderDiscount = new OrderDiscount();
         KieSession kieSession = kieContainer.newKieSession();
