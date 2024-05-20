@@ -29,6 +29,7 @@ public class RuleService {
     @Autowired
     private StudentService studentService;
 
+    @Autowired
     private KieContainer kieContainer;
 
     @PostConstruct
@@ -41,9 +42,6 @@ public class RuleService {
 
         KieFileSystem kieFileSystem = KieServices.Factory.get().newKieFileSystem();
         List<StudentEntity> studentEntities = studentService.list();
-        for (StudentEntity studentEntity : studentEntities) {
-
-        }
 
         KieBuilder kieBuilder = KieServices.Factory.get().newKieBuilder(kieFileSystem);
         kieBuilder.buildAll();
